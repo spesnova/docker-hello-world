@@ -51,9 +51,6 @@ Vagrant.configure("2") do |config|
   end
 
   (1..$num_instances).each do |i|
-    name = "development" if i == 1
-    name = "production"  if i == 2
-
     config.vm.define vm_name = name do |config|
       config.vm.hostname = vm_name
 
