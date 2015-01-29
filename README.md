@@ -1,19 +1,34 @@
-# Dockerハンズオン
-WEB+DB PRESS Vol.86 特集3 Docker実戦投入
+# Hello World App
 
-## Branch の使い分け
-### `master`
+## Getting Started
 
-* README
+```bash
+$ git clone git@github.com:spesnova/docker-hands-on.git && cd docker-hands-on/coreos
+$ vagrant up
+$ vagrant ssh core-01
+```
 
-### `hello-world`
+## build
 
-* Sinatra を使った Hello World アプリケーション
-* DockerHub の spesnova/hello-world リポジトリに push している
+```bash
+core@core-01 $ cd share
+core@core-01 $ docker build -t=spesnova/hello-world .
+```
 
-### `chapter-1`
+## push
 
-* Sinatra を使った Hello World アプリケーションのハンズオン用のベースコード
+```bash
+core@core-01 $ docker push spesnova/hello-world
+```
 
-### `chapter-3`
+## pull
 
+```bash
+core@core-01 $ docker pull spesnova/hello-world
+```
+
+## run
+
+```bash
+core@core-01 $ docker run --rm --name hello-world -p 80:4567 spesnova/hello-world
+```
