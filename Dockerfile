@@ -1,4 +1,9 @@
-FROM ruby:2.2
+FROM debian:jessie
+
+RUN apt-get update && \
+    apt-get install ruby -y && \
+    rm -rf /var/lib/apt/lists/* && \
+    gem install bundler --no-ri --no-rdoc
 
 COPY .  /app
 WORKDIR /app
