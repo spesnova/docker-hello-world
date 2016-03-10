@@ -3,7 +3,7 @@
 [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/spesnova/hello-world/latest.svg)](https://hub.docker.com/r/spesnova/hello-world/)
 
 ```bash
-$ docker run -d -p 80:4567 spesnova/hello-world bundle exec ruby app.rb
+$ docker run -d -p 80:4567 spesnova/hello-world
 $ open http://<YOUR_DOCKER_HOST_IP>
 ```
 
